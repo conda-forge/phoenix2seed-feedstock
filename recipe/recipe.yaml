@@ -1,5 +1,6 @@
 context:
-  version: "1.0.0"
+  version: "1.1.0"
+  python_min: "3.12"
 
 package:
   name: phoenix2seed
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://gitlab.com/earthscope/public/epic/mt/phoenix2seed/-/archive/v${{ version }}/phoenix2seed-v${{ version }}.tar.gz
-  sha256: fc9aee810578de1523d178b1886b965b98a7a4fd49f31f6126016a27b7a61cf3
+  sha256: 71d15aec60d2e2109af47eb3c7e662298274b34cf3b86dea378912cec299fb24
 
 build:
   noarch: python
@@ -21,7 +22,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools
+    - setuptools >=77
   run:
     - python >=${{ python_min }}
     - configobj
